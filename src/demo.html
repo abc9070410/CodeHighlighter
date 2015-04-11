@@ -1,0 +1,104 @@
+<html>
+   <head>
+      <title>程式碼上色程式 (beta) </title>
+      <style>
+         .faq_menu1 dl {
+         color:blue;
+         margin: 0 ;
+         padding: 0 ;
+         }
+         .faq_menu1 dl {
+         margin-top: -3em ;
+         padding-top: 3.3em ;
+         position: absolute ;
+         top: 0 ;
+         left: -999em ;
+         }
+         .faq dt,
+         .faq dd {
+         color:blue;
+         margin: 0 ;
+         padding: 0 ;
+         }
+         .faq dd {
+         margin-top: -3em ;
+         padding-top: 3.3em ;
+         position: absolute ;
+         top: 0 ;
+         left: -999em ;
+         }
+         .faq_menu dl:target {
+         position: static ;
+         }
+         .faq dd:target {
+         position: static ;
+         }
+         .out {border:3px solid #fff; }
+         .over {border-style:solid; border-width:1px; border-color:#fff #333 #333 #fff;  }
+         .down {border-width:1px; border-style:solid; border-color:#333 #fff #fff #333; text-align:center;padding:2px 0px 0px 2px; }
+         pre.codeStyle {
+         display: block; /* fixes a strange ie margin bug */
+         background-color: #FFFFF0;
+         background-repeat: no-repeat;
+         background-attachment: scroll; /* 可隨捲軸移動 */
+         background-position: top left;
+         border: 1px solid #ccc;
+         padding: 0px 0px 0px 5px;
+         overflow-y:hidden;
+         overflow-x:auto;
+         max-width:588px;   /* 因為blog的寬度就這樣 */  
+         line-height: 1.3em;
+         }
+         .note{
+         color:green !important ;
+         }
+         .quot{
+         color: firebrick !important ;
+         }
+         .tag{
+         color:	 blue;
+         }
+         .reservedWord{
+         color:blue;
+         }
+         .define{
+         color:purple;
+         }
+         h11 {color: #00ff00}
+         h2 {color: #dda0dd}
+         .temp{ font-family:'微軟正黑體' ; }
+         #container {
+         margin: 0 auto;
+         font-family:'微軟正黑體' ;
+         }
+      </style>
+      <script type="text/javascript" src="codeColor.js"></script>
+   </head>
+   <body>
+      <p class="temp" style="background-color:green; color:white"><br>
+         在上面的輸入區中輸入程式碼，若含javascript碼，還要在javascript的方塊上打勾，然後按轉換，<br>便可以在下方看到轉換後的程式碼，其下還有結果預覽，可以先看看這段程式碼貼上網頁後，會長什麼樣子。<br><br>
+      </p>
+      <hr>
+      <div id="container">
+         <form name="form1">
+            <b> 原本的程式碼：</b><br>
+            <textarea cols="110" rows="9" WRAP=OFF id="txtTest" name="txtTest">
+            </textarea><br></br>
+            <span id="txtCount"></span>  
+            <input type="checkbox" name="HTML" checked="true" ><b>HTML</b>
+            <input type="checkbox" name="JAVASCRIPT" checked="true" ><b>javascript</b>
+            <input type="checkbox" name="CPP" checked="true" ><b>C/C++</b>
+            <br>
+            <input type="button" value="轉換" id="transferButton">
+            <b>轉換後的程式碼：</b><br>
+            <textarea cols="110" rows="15" WRAP=OFF id="txtTest2" name="txtTest2">
+            </textarea>
+         </form>
+      </div>
+      <br>
+      <hr>
+      <b>輸出結果：</b><br> <span id="txtCount2"></span> 
+      <br><br>
+   </body>
+</html>
+
